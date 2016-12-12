@@ -1,0 +1,41 @@
+* Write your own Java Asynchronous REST service with JDK only
+** Why?
+*** UX tribe organizes Java Kata
+*** What can be done in 2 hours?
+*** Small bet, write HTTP server in 15 minutes :).
+** How?
+*** JDK doesn't provide official HTTP server (like Go or Python)
+
+*** Possible solutions
+**** com.sun.net.httpserver.HttpServer
+     - unofficial server provided by Sun
+     - many features like SSL, filters etc.
+     - used to host webservices JAX-WS 2.0 since JDK 6
+       [[http://www.oracle.com/technetwork/articles/javase/jax-ws-2-141894.html][Introduction to JAX-WS 2.0]]
+
+**** official webservices interfaces
+     - javax.xml.* and @WebServiceProvider
+       [[http://stackoverflow.com/a/24103800][Stackoverflow]]
+     - very limited
+
+**** write your own server
+     - flexible
+     - small footprint
+     - not that complicated
+     - it's a challange :)
+
+** Solution
+*** Old way
+    - ServerSocket/Socket and java.io.*Stream
+*** Asynchronous channels
+    - java.nio.* channels (since Java 1.4)
+    - better performance than java.io
+      - ByteBuffers, etc.
+      - two-way channels (streams only one-way)
+    - JDK 7 - added support for async
+** Tests
+*** you can run tests with:
+#+BEGIN_SRC bash
+  make test
+#+END_SRC
+*** or run class TestSuite
