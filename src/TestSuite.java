@@ -30,15 +30,15 @@ public class TestSuite {
     public static void main(String []args) throws Exception {
         execute(Arrays.asList(
                               ServerTest::shouldHaveHealthCheck,
-                              // server.ServerTest::shouldReturnNotFoundWhenNoEndpointDeclared,
-                              // server.ServerTest::shouldHandleWithCustomEndpont,
+                              ServerTest::shouldReturnNotFoundWhenNoEndpointDeclared,
+                              ServerTest::shouldHandleWithCustomEndpont,
 
-                              // TodoRestTest::shouldReturnEmptyListOfTasks,
-                              // TodoRestTest::shouldAddNewTaskToEmptyList,
-                              // TodoRestTest::shouldGetTaskById,
-                              // TodoRestTest::shouldReturn404ForNotExistingTask,
-                              // TodoRestTest::shouldUpdateTaskById,
-                              // TodoRestTest::shouldDeleteTask,
+                              TodoRestTest::shouldReturnEmptyListOfTasks,
+                              TodoRestTest::shouldAddNewTaskToEmptyList,
+                              TodoRestTest::shouldGetTaskById,
+                              TodoRestTest::shouldReturn404ForNotExistingTask,
+                              TodoRestTest::shouldUpdateTaskById,
+                              TodoRestTest::shouldDeleteTask,
                               () -> "END."));
     }
 }
