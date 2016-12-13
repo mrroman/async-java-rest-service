@@ -1,10 +1,14 @@
+package data;
+
+import data.Task;
+
 import java.util.List;
 
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "tasks")
 @XmlAccessorType(XmlAccessType.FIELD)
-class Tasks {
+public class Tasks {
 
     @XmlElement(name = "task")
     private List<Task> tasks;

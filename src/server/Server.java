@@ -1,13 +1,12 @@
+package server;
+
 import java.io.Closeable;
 import java.io.IOException;
 
-import java.net.*;
-import java.nio.*;
 import java.nio.channels.*;
 import java.util.*;
 import java.util.function.*;
 import java.util.logging.*;
-import java.util.stream.Collectors;
 
 public class Server implements Closeable {
 

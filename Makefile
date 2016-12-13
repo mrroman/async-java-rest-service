@@ -1,5 +1,5 @@
 all: out
-	javac -Xlint src/*.java -d out
+	javac -Xlint -sourcepath src -d out src/TodoRest.java src/TestSuite.java
 
 run: all
 	java -cp out -server -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts TodoRest

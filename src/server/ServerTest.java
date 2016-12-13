@@ -1,3 +1,5 @@
+package server;
+
 import java.io.FileNotFoundException;
 
 import java.util.*;
@@ -21,7 +23,7 @@ public class ServerTest {
             if (response.equals("OK")) {
                 return "OK";
             } else {
-                return "FAIL: No health check. Response: " + response;
+                return "FAIL: No health check. server.Response: " + response;
             }
         }
     }
@@ -56,7 +58,7 @@ public class ServerTest {
             if (response.equals("SUPER")) {
                 return "OK";
             } else {
-                return "FAIL: No health check. Response: " + response;
+                return "FAIL: No health check. server.Response: " + response;
             }
         }
     }

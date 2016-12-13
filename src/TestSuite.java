@@ -1,5 +1,6 @@
+import server.ServerTest;
+
 import java.util.*;
-import java.util.stream.Collectors;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -29,8 +30,8 @@ public class TestSuite {
     public static void main(String []args) throws Exception {
         execute(Arrays.asList(
                               ServerTest::shouldHaveHealthCheck,
-                              // ServerTest::shouldReturnNotFoundWhenNoEndpointDeclared,
-                              // ServerTest::shouldHandleWithCustomEndpont,
+                              // server.ServerTest::shouldReturnNotFoundWhenNoEndpointDeclared,
+                              // server.ServerTest::shouldHandleWithCustomEndpont,
 
                               // TodoRestTest::shouldReturnEmptyListOfTasks,
                               // TodoRestTest::shouldAddNewTaskToEmptyList,

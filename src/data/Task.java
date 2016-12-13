@@ -1,8 +1,10 @@
+package data;
+
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "task")
 @XmlAccessorType(XmlAccessType.FIELD)
-class Task {
+public class Task {
 
     private String id;
     private String title;
